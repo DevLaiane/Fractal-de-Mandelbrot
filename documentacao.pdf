@@ -1,0 +1,26 @@
+A implementação do Fractal de Mandelbrot foi desenvolvida utilizando uma abordagem
+que combina as linguagens C e Python, aproveitando os pontos fortes de cada uma. O
+núcleo matemático do cálculo do fractal, baseado na fórmula iterativa Z² + C, foi
+implementado em C devido à sua eficiência computacional para operações numéricas
+intensivas. Os resultados desses cálculos são armazenados em uma matriz que serve
+como ponte de comunicação entre as duas linguagens. Paralelamente, um arquivo de
+parâmetros foi criado para armazenar as configurações de visualização, funcionando
+como um meio adicional de troca de informações entre os componentes do sistema. A
+integração entre as linguagens é realizada através da biblioteca os do Python, que
+permite compilar e executar o programa C de forma controlada. Esta abordagem
+elimina a necessidade de manipulação direta do código C pelo Python, mantendo uma
+separação clara de responsabilidades. O programa em C foi projetado com dois modos
+distintos de funcionamento: um modo padrão que utiliza valores pré-definidos quando
+nenhum argumento é fornecido ou quando o número de argumentos está incorreto, e
+um modo parametrizado que aceita configurações externas. Quando executado a
+partir do Python, os parâmetros desejados são passados como argumentos,
+permitindo explorar diferentes regiões e configurações do fractal de maneira dinâmica.
+O fluxo de execução do sistema começa com a interface em Python, onde o usuário
+pode definir os parâmetros de visualização. Em seguida, o Python utiliza a biblioteca os
+para compilar e executar o programa C, passando os parâmetros configurados. O
+componente em C processa os cálculos do fractal com base nesses parâmetros e
+armazena os resultados na matriz compartilhada. Finalmente, o Python recupera esses
+dados e os apresenta graficamente, completando o ciclo de processamento. Esta
+arquitetura oferece flexibilidade para testar diversas configurações do fractal enquanto
+mantém o desempenho computacional necessário para os cálculos complexos
+envolvidos na geração da imagem.
